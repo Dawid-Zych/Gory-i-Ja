@@ -12,7 +12,7 @@ body {
 .header {
   background-image: url(../images/mountains.jpg);
   background-size: 100%;
-  background-position: top 0 left 20%;
+  background-position: top 20% left 0;
   background-repeat: no-repeat;
   position: relative;
   z-index: 0;
@@ -36,19 +36,33 @@ body {
   border: solid 2px black;
   border-radius: 20px;
 }
-.header .navigation {
-  font-size: 2.5rem;
+.header .title {
+  position: absolute;
+  left: 30%;
+  font-family: "Dancing Script", cursive;
+  align-self: center;
+  margin: auto;
+  font-size: 6rem;
+  text-decoration: underline;
+  text-decoration-color: green;
+}
+
+.navigation {
+  font-size: 2rem;
+  padding: 10px;
   color: rgb(52, 62, 50);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   margin-right: 40px;
+  box-shadow: 0 0 20px 2px;
 }
-.header .navigation .nav-link {
+.navigation .nav-link {
   position: relative;
   margin: 0 40px;
 }
-.header .navigation .dropdown-content {
+.navigation .dropdown-content {
   display: none;
   position: absolute;
   background-color: #fff;
@@ -56,28 +70,76 @@ body {
   top: 100%;
   left: 0;
   opacity: 0;
-  pointer-events: none;
   transition: opacity 0.3s ease;
   font-size: 0.5em;
   line-height: 1.5;
   border-radius: 5px;
 }
-.header .navigation .dropdown-content a {
+.navigation .dropdown-content a {
   display: flex;
   padding: 10px;
   text-decoration: none;
   color: black;
   border-bottom: 1px solid;
 }
-.header .navigation .dropdown-content a:hover {
+.navigation .dropdown-content a:hover {
   background-color: #d0e2cd;
 }
-.header .navigation .nav-link:hover .dropdown-content {
+.navigation .nav-link:hover .dropdown-content {
   display: block;
   opacity: 1;
-  pointer-events: auto;
+}
+.navigation .show-dropdown {
+  display: block;
+  opacity: 1;
 }
 
+@media screen and (max-width: 1280px) {
+  .header .title {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header .title {
+    font-size: 3.5rem;
+    left: 35%;
+  }
+  .navigation {
+    font-size: 1.2rem;
+  }
+  .navigation .dropdown-content {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .title {
+    font-size: 2.5rem;
+    left: 40%;
+  }
+  .navigation {
+    font-size: 1rem;
+  }
+  .navigation .dropdown-content {
+    font-size: 1rem;
+  }
+  .navigation .nav-link {
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header .title {
+    display: none;
+  }
+  .navigation {
+    font-size: 0.5rem;
+  }
+  .navigation .dropdown-content {
+    font-size: 1em;
+  }
+  .navigation .nav-link {
+    margin: 0 20px;
+  }
+}
 main {
   margin-top: 40px;
   font-size: 2rem;
