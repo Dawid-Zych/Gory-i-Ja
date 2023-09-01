@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+}
+
+.header {
+  background-image: url(../images/mountains.jpg);
+  background-size: 100%;
+  background-position: top 0 left 20%;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: -5px -10px 20px 0px #000;
+}
+.header .img-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: -10;
+}
+.header .img-container {
+  padding: 20px;
+}
+.header .img-container img {
+  width: 200px;
+  height: 200px;
+  border: solid 2px black;
+  border-radius: 20px;
+}
+.header .navigation {
+  font-size: 2.5rem;
+  color: rgb(52, 62, 50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+}
+.header .navigation .nav-link {
+  position: relative;
+  margin: 0 40px;
+}
+.header .navigation .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  font-size: 0.5em;
+  line-height: 1.5;
+  border-radius: 5px;
+}
+.header .navigation .dropdown-content a {
+  display: flex;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid;
+}
+.header .navigation .dropdown-content a:hover {
+  background-color: #d0e2cd;
+}
+.header .navigation .nav-link:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+main {
+  margin-top: 40px;
+  font-size: 2rem;
+}/*# sourceMappingURL=style.css.map */
