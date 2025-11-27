@@ -78,3 +78,23 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 });
+document.addEventListener('DOMContentLoaded', () => {
+	const modal = document.getElementById('modal');
+	const modalImg = modal.querySelector('img');
+	const caption = modal.querySelector('.caption');
+	const close = modal.querySelector('.close');
+
+	document.querySelectorAll('.schronisko.visited').forEach(item => {
+		item.addEventListener('click', () => {
+			modal.classList.add('active');
+			modalImg.src = item.querySelector('img').src;
+			caption.textContent = `${item.dataset.name} – ${item.dataset.date}`;
+		});
+	});
+
+	close.addEventListener('click', () => modal.classList.remove('active'));
+
+	modal.addEventListener('click', e => {
+		if (e.target === modal) modal.classList.remove('active');
+	});
+});
