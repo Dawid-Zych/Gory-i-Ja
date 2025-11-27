@@ -11,7 +11,7 @@ body {
 }
 
 .header {
-	background-image: url(../images/mountains.jpg);
+	background-image: url(../../images/mountains.jpg);
 	background-size: 100%;
 	background-position: top 20% left 0;
 	background-repeat: no-repeat;
@@ -335,6 +335,143 @@ main {
 
 		.intro-description {
 			font-size: 16px;
+		}
+	}
+}
+
+.schroniska {
+	text-align: center;
+	background-image: url('../../images/photo.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 60px 40px;
+	min-height: 100vh;
+
+	h1 {
+		text-align: center;
+		font-family: 'Dancing Script', cursive;
+		font-size: 5.5rem;
+		margin-bottom: 30px;
+		color: #3e3e3e;
+	}
+	p {
+		text-align: center;
+		color: #555;
+		margin: 0 auto 50px;
+		line-height: 1.5;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 30px;
+		counter-reset: schronisko;
+		justify-items: center;
+	}
+
+	.schronisko::before {
+		counter-increment: schronisko;
+		content: counter(schronisko);
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		background: rgba(0, 0, 0, 0.6);
+		color: #fff;
+		font-size: 0.9rem;
+		font-weight: bold;
+		border-radius: 50%;
+		width: 28px;
+		height: 28px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 2;
+	}
+	.schronisko {
+		position: relative;
+		background: inherit;
+		border-radius: 12px;
+		overflow: hidden;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+		}
+
+		img {
+			border: 2px solid #020602; /* zielona ramka */
+			border-radius: 12px;
+			padding: 2px;
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+
+		.overlay {
+			padding: 15px;
+			text-align: center;
+		}
+		p {
+			text-align: center;
+			color: #555;
+			max-width: 600px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+		span {
+			color: #666;
+		}
+		&.not-visited {
+			background: #e0e0e0;
+			color: #555;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0.6;
+			border: 2px dashed #aaa;
+			.placeholder {
+				font-size: 1.6rem;
+				padding: 20px;
+			}
+		}
+	}
+}
+
+.modal {
+	display: none; /* ukryty domyślnie */
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.8);
+	justify-content: center;
+	align-items: center;
+	z-index: 999; /* upewnij się, że jest nad całą stroną */
+
+	&.active {
+		display: flex; /* pokaż modal jako flexbox */
+	}
+
+	.modal-content {
+		background: #fff;
+		border-radius: 12px;
+		padding: 20px;
+		width: 90%;
+		position: relative;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+		img {
+			width: 100%;
+			border-radius: 10px;
+		}
+
+		.close {
+			position: absolute;
+			top: 10px;
+			right: 15px;
+			font-size: 2rem;
+			cursor: pointer;
+			color: #333;
 		}
 	}
 }
