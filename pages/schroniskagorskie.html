@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Góry i Ja</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../sass/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="img-shadow"></div>
+        <div class="img-container">
+            <a href="../index.html"><img src="../images/logo.jpg" alt="Góry i Ja"></a>
+        </div>
+        <div class="title">Schroniska Górskie</div>
+    </header>
+    <nav class="navigation">
+        <div class="nav-link">
+            Projekty Górskie
+            <div class="dropdown-content">
+                <!-- Treść menu rozwijanego dla "Projekty Górskie" -->
+                <a href="#">Schroniska Tatrzańskie</a>
+                <a href="#">Tatrzańskie Dwutysięczniki</a>
+                <a href="#">Tatrzańskie Stawy</a>
+                <a href="#">Korona Tatr</a>
+                <a href="#">Korona Gór Polski</a>
+                <a href="#">Turystyczna Korona Tatr</a>
+            </div>
+        </div>
+        <div class="nav-link">
+            Odznaki Turystyczne
+            <div class="dropdown-content">
+                <!-- Treść menu rozwijanego dla "Usługi" -->
+                <a href="#">Odznaki Turystyczne GOT</a>
+                <a href="#">Opcja 2</a>
+                <a href="#">Opcja 3</a>
+            </div>
+        </div>
+        <div class="nav-link">
+            Regulaminy
+            <div class="dropdown-content">
+                <!-- Treść menu rozwijanego dla "Usługi" -->
+                <a href="#">Odznaki Turystyczne GOT</a>
+                <a href="https://www.w3schools.com">Opcja 2</a>
+                <a href="#">Opcja 3</a>
+            </div>
+        </div>
+    </nav>
+    <main class="schroniska">
+        <section class="intro-section">
+            <h1>Moje Schroniska Tatrzańskie</h1>
+            <p>Odznaka „Schroniska Tatrzańskie” jest odznaką regionalną, ustanowioną przez Hutniczo-Miejski Oddział PTTK
+                w Krakowie z inicjatywy Klubu Turystyki Górskiej „Wierch”.</p><br>
+            <p>Odwiedzone miejsca oznaczone są zdjęciem i datą pobytu. Kliknij, aby powiększyć.</p>
+        </section>
+
+
+        <section class="grid">
+            <!-- Przykład odwiedzonego -->
+            <div class="schronisko visited" data-name="Polana Chochołowska" data-date="2024-08-12">
+                <img src="../images/mountains.jpg" alt="Schronisko na Polanie Chochołowskiej">
+                <div class="overlay">
+                    <p>Polana Chochołowska</p>
+                    <span>1146 m n.p.m.</span>
+                    <span>12.08.2024</span>
+                </div>
+            </div>
+
+            <div class="schronisko visited" data-name="Hala Ornak">
+                <img src="../images/mountains.jpg" alt="Schronisko na Hali Ornak">
+                <div class="overlay">
+                    <p>Hala Ornak</p>
+                    <span>1100 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko visited" data-name="Hala Kondratowa">
+                <img src="../images/mountains.jpg" alt="Schronisko na Hali Kondratowej">
+                <div class="overlay">
+                    <p>Hala Kondratowa</p>
+                    <span>1333 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko visited" data-name="Kalatówki">
+                <img src="../images/mountains.jpg" alt="Hotel Górski PTTK Kalatówki">
+                <div class="overlay">
+                    <p>Kalatówki</p>
+                    <span>1198 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Murowaniec">
+                <img src="../images/mountains.jpg" alt="Schronisko Murowaniec">
+                <div class="overlay">
+                    <p>Murowaniec</p>
+                    <span>1500 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Dolina Pięciu Stawów">
+                <img src="../images/mountains.jpg" alt="Schronisko w Dolinie Pięciu Stawów">
+                <div class="overlay">
+                    <p>Dolina Pięciu Stawów</p>
+                    <span>1671 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Morskie Oko">
+                <img src="../images/mountains.jpg" alt="Schronisko nad Morskim Okiem">
+                <div class="overlay">
+                    <p>Morskie Oko</p>
+                    <span>1410 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Roztoka">
+                <img src="../images/mountains.jpg" alt="Schronisko w Dolinie Roztoki">
+                <div class="overlay">
+                    <p>Roztoka</p>
+                    <span>1031 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Plesnivec">
+                <img src="../images/mountains.jpg" alt="Chata Plesnivec">
+                <div class="overlay">
+                    <p>Chata Plesnivec</p>
+                    <span>1290 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Zelené pleso">
+                <img src="../images/mountains.jpg" alt="Chata pri Zelenom plese">
+                <div class="overlay">
+                    <p>Chata pri Zelenom plese</p>
+                    <span>1550 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Encián">
+                <img src="../images/mountains.jpg" alt="Vysokohorská chata Encián">
+                <div class="overlay">
+                    <p>Chata Encián</p>
+                    <span>1752 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Skalnatá chata">
+                <img src="../images/mountains.jpg" alt="Skalnatá chata">
+                <div class="overlay">
+                    <p>Skalnatá chata</p>
+                    <span>1751 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Hrebienok">
+                <img src="../images/mountains.jpg" alt="Horský hotel Sorea Hrebienok">
+                <div class="overlay">
+                    <p>Hrebienok</p>
+                    <span>1285 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Bilíkova">
+                <img src="../images/mountains.jpg" alt="Bilíkova chata">
+                <div class="overlay">
+                    <p>Bilíkova chata</p>
+                    <span>1255 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Zamkovského">
+                <img src="../images/mountains.jpg" alt="Zamkovského chata">
+                <div class="overlay">
+                    <p>Zamkovského chata</p>
+                    <span>1475 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Rainerowa">
+                <img src="../images/mountains.jpg" alt="Rainerowa chata">
+                <div class="overlay">
+                    <p>Rainerowa chata</p>
+                    <span>1301 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Téryho">
+                <img src="../images/mountains.jpg" alt="Téryho chata">
+                <div class="overlay">
+                    <p>Téryho chata</p>
+                    <span>2015 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Zbojnícka">
+                <img src="../images/mountains.jpg" alt="Zbojnícka chata">
+                <div class="overlay">
+                    <p>Zbojnícka chata</p>
+                    <span>1960 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Sliezsky dom">
+                <img src="../images/mountains.jpg" alt="Horský hotel Sliezsky dom">
+                <div class="overlay">
+                    <p>Sliezsky dom</p>
+                    <span>1670 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Popradské pleso">
+                <img src="../images/mountains.jpg" alt="Horský hotel Popradské pleso">
+                <div class="overlay">
+                    <p>Popradské pleso</p>
+                    <span>1500 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Majláthova">
+                <img src="../images/mountains.jpg" alt="Majláthova chata">
+                <div class="overlay">
+                    <p>Majláthova chata</p>
+                    <span>1500 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Rysy">
+                <img src="../images/mountains.jpg" alt="Chata pod Rysmi">
+                <div class="overlay">
+                    <p>Chata pod Rysmi</p>
+                    <span>2215 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Solisko">
+                <img src="../images/mountains.jpg" alt="Horská chata pod Soliskom">
+                <div class="overlay">
+                    <p>Pod Soliskom</p>
+                    <span>1840 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Žiarska">
+                <img src="../images/mountains.jpg" alt="Žiarska chata">
+                <div class="overlay">
+                    <p>Žiarska chata</p>
+                    <span>1280 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Náružím">
+                <img src="../images/mountains.jpg" alt="Chata pod Náružím / Cervenec">
+                <div class="overlay">
+                    <p>Chata pod Náružím / Cervenec</p>
+                    <span>1420 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Zverovka">
+                <img src="../images/mountains.jpg" alt="Chata Zverovka">
+                <div class="overlay">
+                    <p>Chata Zverovka</p>
+                    <span>1020 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Ťatliakova">
+                <img src="../images/mountains.jpg" alt="Ťatliakova chata">
+                <div class="overlay">
+                    <p>Ťatliakova chata</p>
+                    <span>1380 m n.p.m.</span>
+                </div>
+            </div>
+
+            <div class="schronisko" data-name="Oravice">
+                <img src="../images/mountains.jpg" alt="Chata Oravice">
+                <div class="overlay">
+                    <p>Chata Oravice</p>
+                    <span>812 m n.p.m.</span>
+                </div>
+            </div>
+
+
+            <!-- Przykład nieodwiedzonego -->
+            <div class="schronisko not-visited" data-name="Murowaniec">
+                <div class="placeholder">Murowaniec<br><small>jeszcze nieodwiedzone</small></div>
+            </div>
+
+            <!-- dodasz kolejne analogicznie -->
+        </section>
+
+    </main>
+
+    <!-- prosty modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="" alt="">
+            <p class="caption"></p>
+        </div>
+    </div>
+
+    <script src="../app.js"></script>
+</body>
+
+</html>
